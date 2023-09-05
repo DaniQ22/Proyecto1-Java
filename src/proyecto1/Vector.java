@@ -4,6 +4,8 @@
  */
 package proyecto1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
@@ -49,7 +51,39 @@ public class Vector {
         
     }
     
+    public int ContarImpares(){
+        int contador = 0;
+        for (int i = 0; i < getTamaño(); i++) {
+            if(vector[i]%2==1){
+                contador ++;
+            }
+        }
+        
+        return contador;
+    }
     
-}
+    public String VecesRepetio(){
+        String lis = "";
+        int cont = 0;
+        for (int i = 0; i < getTamaño(); i++) {
+            for (int j = i+1; j < getTamaño(); j++) {
+                if (vector[i]==vector[j]) {
+                    cont ++;
+                    lis = "El numero repetido es: "+vector[i]+ " Y su posicion es: "+i+ " Y se repite: "+cont;
+                    
+                }
+                
+            }
+   
+            }  
+         return lis;
+       
+        }
+    
+     
+    }
+       
+    
+    
 
 
