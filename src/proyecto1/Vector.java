@@ -13,10 +13,20 @@ import javax.swing.JOptionPane;
 public class Vector {
     int tamaño;
     int vector[];  
+    int numero;
     
     public Vector(){
         tamaño = 0;
-        vector = null;    
+        vector = null;
+        numero = 0;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
     
     public void crearvector(){
@@ -40,11 +50,20 @@ public class Vector {
  
     }
     
+    public String MostrarVector(){
+        String list = "";
+        for (int i = 0; i < getTamaño(); i++) {
+            list += "Posicion "+ i + " Valor "+ vector[i] + "\n";
+            
+        }
+        return list;
+        
+    }
     public String mostraPares(){
         String lista = "";
         for (int i = 0; i < getTamaño(); i++) {
             if(i%2==0){
-                lista += "En la posicion "+i+"Tenemos: "+vector[i];      
+                lista += "En la posicion "+i+" Tenemos: "+vector[i] + " \n";      
             } 
         }
         return lista;
@@ -64,21 +83,34 @@ public class Vector {
     
     public String VecesRepetio(){
         String lis = "";
-        int cont = 0;
+        int cont;
         for (int i = 0; i < getTamaño(); i++) {
-            for (int j = i+1; j < getTamaño(); j++) {
-                if (vector[i]==vector[j]) {
-                    cont ++;
-                    lis = "El numero repetido es: "+vector[i]+ " Y su posicion es: "+i+ " Y se repite: "+cont;
+            cont = 1;
+            for (int j = 0; j < getTamaño(); j++) {
+                if (j!=i) {
+                    if (vector[i]==vector[j]) {
+                        cont ++;
+                        lis += "El numero" + vector[i] + " Se repite " + cont;
+                        
+                    }
                     
                 }
                 
             }
-   
-            }  
-         return lis;
-       
         }
+        return lis;
+        }
+    
+    public int CantiVeMayor(){
+        int cont = 0;
+        for (int i = 0; i < getTamaño(); i++) {
+            if (vector[i]>getNumero()) {
+                cont ++;               
+            }
+            
+        }
+        return cont;
+    }
     
      
     }
