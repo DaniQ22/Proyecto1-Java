@@ -90,12 +90,9 @@ public class Vector {
                 if (j!=i) {
                     if (vector[i]==vector[j]) {
                         cont ++;
-                        lis += "El numero" + vector[i] + " Se repite " + cont;
-                        
+                        lis += "El numero" + vector[i] + " Se repite " + cont + " \n";                   
                     }
-                    
                 }
-                
             }
         }
         return lis;

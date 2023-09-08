@@ -242,6 +242,11 @@ public class Ventana extends javax.swing.JFrame {
         cont ++;
         this.Pantalla2.setText(""+vect.MostrarVector());
         this.Caja2.setText("");
+        if(vect.getTamaño()== cont){
+            JOptionPane.showMessageDialog(null, "El vector esta lleno, no se puede agregar mas datos");
+            this.Caja2.setVisible(false);
+        }
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
