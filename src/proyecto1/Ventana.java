@@ -241,6 +241,7 @@ public class Ventana extends javax.swing.JFrame {
         vect.setVector(cont, valor);
         cont ++;
         this.Pantalla2.setText(""+vect.MostrarVector());
+        this.Caja2.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
